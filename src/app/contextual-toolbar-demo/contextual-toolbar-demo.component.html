@@ -1,3 +1,8 @@
+<nm-contextual-toolbar [count]="selection.selected.length"
+                      [actions]="actions"
+                      (selectedAction)="actionSelected($event)"
+                      (clearSelection)="clearSelection()"></nm-contextual-toolbar>
+                      
 <div class="container">
   <h2>Contextual Toolbar</h2>
 
@@ -10,11 +15,6 @@
   <p>
     You can clear the selection by using the Clear button located on the left of the Contextual Toolbar.
   </p>
-
-  <nm-contextual-toolbar [count]="selection.selected.length"
-                      [actions]="actions"
-                      (selectedAction)="actionSelected($event)"
-                      (clearSelection)="clearSelection()"></nm-contextual-toolbar>
 
   <mat-table #table [dataSource]="dataSource" class="table">
     <ng-container matColumnDef="select">
