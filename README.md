@@ -1,27 +1,17 @@
-# NereoMaterialDemo
+# Nereo Material Demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
+This project is sample code to demonstrate both, how to use and how it looks the [Nereo Material library](https://github.com/nereolopez/nereo-material).
 
-## Development server
+## Check it locally
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+If you want to see it running locally follow the steps below: 
+1. Clone this repository.
+2. Install the dependencies using the `npm install` command from the terminal.
+3. Serve it locally by running `ng serve`. 
+4. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+As you might have guessed, this is a regular Angular application. Within the `app` folder you will see a demo component for each of the available components in Nereo Material library. For instance, to see how to use the Contextual Toolbar, you can check the `contextual-toolbar-demo` component.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Live Demo
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+If you want to see it live instead, you can just check the code in this repo, and see the demo application [here]().
