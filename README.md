@@ -14,4 +14,4 @@ As you might have guessed, this is a regular Angular application. Within the `ap
 
 ## Live Demo
 
-If you want to see it live instead, you can just check the code in this repo, and see the demo application [here]().
+If you want to see it live instead, you can just check the code in this repo, and see the demo application [here](https://nereo-material-demo.firebaseapp.com/home).
