@@ -12,6 +12,7 @@ export class ContextualToolbarDemoComponent implements OnInit {
 
   selectedItems: number = 0;
   actions: any[] = ACTIONS;
+  moreActions: any[] = MORE_ACTIONS;
 
   displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<any>(ELEMENT_DATA);
@@ -49,10 +50,16 @@ const ACTIONS: any[] = [
     icon: 'file_copy'
   },
   {
-    name: 'delete',
-    icon: 'delete',
+    name: 'share',
+    icon: 'share',
   }
 ];
+
+const MORE_ACTIONS: any[] = [
+  {
+    name: 'delete'
+  }
+]
 
 const ELEMENT_DATA: any[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
