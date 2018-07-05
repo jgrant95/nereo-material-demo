@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { MatToolbarModule, MatButtonModule, MatIconModule, MatTooltipModule, MatTableModule, MatCheckboxModule, MatCardModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatIconModule, MatTooltipModule, MatTableModule, MatCheckboxModule, MatCardModule, MatSlideToggleModule } from '@angular/material';
 import { ContextualToolbarModule } from 'nereo-material';
 
 import { AppComponent } from './app.component';
@@ -28,6 +28,7 @@ import { HomeComponent } from './home/home.component';
     MatTableModule,
     MatCheckboxModule,
     MatCardModule,
+    MatSlideToggleModule,
     RouterModule.forRoot([
       {
         path: 'home',
