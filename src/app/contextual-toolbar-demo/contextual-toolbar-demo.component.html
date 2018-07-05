@@ -28,7 +28,6 @@
             [actions]="actions"
             [moreActions]="moreActions"
             [contextualizeTo]="'card'"
-            (selectedAction)="actionSelected($event)"
             (clearSelection)="clearSelection()"></nm-contextual-toolbar>
 
         <mat-table #table [dataSource]="dataSource" class="table">
