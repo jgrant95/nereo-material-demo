@@ -3,9 +3,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MatToolbarModule, MatButtonModule, MatIconModule, MatTooltipModule, MatTableModule, MatCheckboxModule, MatCardModule, MatSlideToggleModule } from '@angular/material';
-import { ContextualToolbarModule } from 'nereo-material';
+import { ContextualToolbarModule, BannerModule } from 'nereo-material';
 
 import { AppComponent } from './app.component';
 import { ContextualToolbarDemoComponent } from './contextual-toolbar-demo/contextual-toolbar-demo.component';
@@ -19,8 +20,10 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
+    FlexLayoutModule,
     BrowserAnimationsModule,
     ContextualToolbarModule,
+    BannerModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,

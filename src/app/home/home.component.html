@@ -7,25 +7,44 @@
 
   <h2>Available Components</h2>
 
-  <div fxLayout="row" fxLayoutGap="30px">
+  <div fxLayout="row" fxLayoutGap="30px" fxLayout.lt-md="column">
     <mat-card>
       <mat-card-header>
-          <mat-card-title>Contextual Toolbar</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="https://material.io/design/assets/1sej9Nb4bY284xcA-oF5k_mgyTMxWN_2q/topappbars-contextual.png" alt="Contextual Action Bar">
-        <mat-card-content>
-          <p>
-            Contextual toolbar allows you to overlay the main toolbar with one that is context-aware. Just bind it so that it knows how many items are being selected and what actions should be Available
-            for the user.
-          </p>
+        <mat-card-title>Contextual Toolbar</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="https://material.io/design/assets/1sej9Nb4bY284xcA-oF5k_mgyTMxWN_2q/topappbars-contextual.png" alt="Contextual Action Bar">
+      <mat-card-content>
+        <p>
+          Contextual toolbar allows you to overlay the main toolbar with one that is context-aware. Just bind it so that it knows how many items are being selected and what actions should be Available
+          for the user.
+        </p>
 
-          <p>
-            You can read more about this Material Design component intent in the <a href="https://material.io/design/components/app-bars-top.html#usage">official documentation</a>.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button color="primary" routerLink="/contextual-toolbar">DEMO</button>
-        </mat-card-actions>
-      </mat-card>
+        <p>
+          You can read more about this Material Design component intent in the <a href="https://material.io/design/components/app-bars-top.html#usage">official documentation</a>.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" routerLink="/contextual-toolbar">DEMO</button>
+      </mat-card-actions>
+    </mat-card>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Banner</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image src="https://storage.googleapis.com/spec-host-backup/mio-design%2Fassets%2F1yplLRKqW6EKB6hjVFGt-gJnPpdEJrPFV%2Fbanners-imagery.png" alt="Banner">
+      <mat-card-content>
+        <p>
+          The Banner is the proper way to notify the user in a non intrusive way when the message has medium priority only and the user action is optional. Despite that, it requires user dismissal.
+        </p>
+
+        <p>
+          You can read more about this Material Design component intent in the <a href="https://material.io/design/components/banners.html#">official documentation</a>.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" routerLink="/banner">DEMO</button>
+      </mat-card-actions>
+    </mat-card>
   </div>
 </div>
