@@ -11,12 +11,14 @@ import { ContextualToolbarModule, BannerModule } from 'nereo-material';
 import { AppComponent } from './app.component';
 import { ContextualToolbarDemoComponent } from './contextual-toolbar-demo/contextual-toolbar-demo.component';
 import { HomeComponent } from './home/home.component';
+import { BannerDemoComponent } from './banner-demo/banner-demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContextualToolbarDemoComponent,
-    HomeComponent
+    HomeComponent,
+    BannerDemoComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +42,10 @@ import { HomeComponent } from './home/home.component';
       {
         path: 'contextual-toolbar',
         component: ContextualToolbarDemoComponent
+      },
+      {
+        path: 'banner',
+        component: BannerDemoComponent
       },
       {
         path: '',

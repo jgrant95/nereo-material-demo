@@ -1,0 +1,24 @@
+<nm-banner [icon]="'android'"
+           [show]="showBanner"
+           [firstSentence]="'As a banner I am not intrusive. I wait here until the user interacts with me.'"
+           [secondSentence]="'How do you like me?'"
+           [mainActionText]="'a lot'"
+           [secondaryActionText]="'dismiss'"
+           (mainActionClick)="mainActionClicked()"
+           (secondaryActionClick)="secondaryActionClicked()"></nm-banner>
+
+<div class="container">
+  <h2>Banner</h2>
+
+  <p>
+    Usually, messages to users are shown as the result of some event. In this case, for demo purposes, there you can trigger the appearance of the Banner by clicking the button below.
+  </p>
+
+  <div class="centered">
+    <button mat-button (click)="onShowBanner()" color="primary">Show Banner</button>
+    <p *ngIf="actionResult">
+        You have dismissed the banner with the <b>{{actionResult}}</b> action.
+      </p>
+  </div>
+
+</div>
