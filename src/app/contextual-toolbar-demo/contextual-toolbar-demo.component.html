@@ -14,22 +14,22 @@
 
   <p>The Contextual Toolbar will appear showing you the number of items selected, and, in this case, offering you two actions (copy and share) and one more action (delete). As this is just a demo, the actions in the toolbar will not modify the selected items, but just displayed in the console
         the action you selected.</p>
-
+        
+  <p>
+    The progress mode is available using the Approve button located on the right (the first one) of the Contextual Toolbar.
+    In this example, one of the selected elements will be approved every second.
+  </p>
   <p>
     You can clear the selection by using the Clear button located on the left of the Contextual Toolbar. 
   </p>
+
 
   <mat-card>
       <mat-card-header>
           <mat-card-title>Elements Table</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <nm-contextual-toolbar [count]="selection.selected.length"
-            [actions]="actions"
-            [moreActions]="moreActions"
-            [contextualizeTo]="'card'"
-            (clearSelection)="clearSelection()"></nm-contextual-toolbar>
-
+          
         <mat-table #table [dataSource]="dataSource" class="table">
             <ng-container matColumnDef="select">
                 <th *matHeaderCellDef>

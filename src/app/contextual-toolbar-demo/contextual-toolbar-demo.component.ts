@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { SelectionModel } from '@angular/cdk/collections';
 import { MatTableDataSource } from '@angular/material';
+import { ContextualToolbarComponent } from 'nereo-material';
+import { Observable, interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-contextual-toolbar-demo',
@@ -10,9 +12,14 @@ import { MatTableDataSource } from '@angular/material';
 })
 export class ContextualToolbarDemoComponent implements OnInit {
 
+  @ViewChild(ContextualToolbarComponent) 
+  contextualToolbar: ContextualToolbarComponent;
+
   selectedItems: number = 0;
+  approvedElements: number = 0;
   actions: any[] = ACTIONS;
   moreActions: any[] = MORE_ACTIONS;
+  progressSubscription: Subscription;
 
   displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<any>(ELEMENT_DATA);
@@ -21,7 +28,8 @@ export class ContextualToolbarDemoComponent implements OnInit {
 
   constructor(){}
   
-  ngOnInit(){}
+  ngOnInit(){
+  }
 
   isAllSelected(): boolean {
     const numSelected = this.selection.selected.length;
@@ -37,14 +45,39 @@ export class ContextualToolbarDemoComponent implements OnInit {
 
   actionSelected(action: string): void{
     console.log("App Component: ", action);
+    if (action == 'done') {
+      this.showProgress();
+    }
   }
 
   clearSelection(): void{
     this.selection.clear();
   }
+
+  showProgress(): void{
+    this.approvedElements = 0;
+    this.progressSubscription = interval(1000).subscribe(() => {
+      this.contextualToolbar.setProgress(
+        `Approved ${this.approvedElements} of ${this.selection.selected.length} elements. Please wait...`
+        );
+        this.stopProgress();
+        this.approvedElements++;
+      });
+  }
+
+  stopProgress() {
+    if (this.approvedElements == this.selection.selected.length + 1) {
+      this.progressSubscription.unsubscribe(); 
+      this.contextualToolbar.stopProgress(); 
+    }
+  }
 }
 
 const ACTIONS: any[] = [
+  {
+    name: 'done',
+    icon: 'done'
+  },
   {
     name: 'copy',
     icon: 'file_copy'
