@@ -13,6 +13,6 @@ export class HomeComponent implements OnInit {
   }
 
   openBackdropCode(): void {
-    window.location.href = "http://google.com";
+    window.location.href = "https://github.com/nereolopez/nereo-material-demo/tree/master/src/app/backdrop-demo";
   }
 }
