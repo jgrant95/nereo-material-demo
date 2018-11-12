@@ -12,4 +12,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  openBackdropCode(): void {
+    window.location.href = "http://google.com";
+  }
 }
