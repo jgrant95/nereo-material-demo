@@ -6,13 +6,14 @@ import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MatToolbarModule, MatButtonModule, MatIconModule, MatTooltipModule, MatTableModule, MatCheckboxModule, MatCardModule, MatSlideToggleModule, MatListModule } from '@angular/material';
-import { ContextualToolbarModule, BannerModule, BackdropModule } from 'nereo-material';
+import { ContextualToolbarModule, BannerModule, BackdropModule, FabSpeedDialModule } from 'nereo-material';
 
 import { AppComponent } from './app.component';
 import { ContextualToolbarDemoComponent } from './contextual-toolbar-demo/contextual-toolbar-demo.component';
 import { HomeComponent } from './home/home.component';
 import { BannerDemoComponent } from './banner-demo/banner-demo.component';
 import { BackdropDemoComponent } from './backdrop-demo/backdrop-demo.component';
+import { SpeedDialDemoComponent } from './speed-dial-demo/speed-dial-demo.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BackdropDemoComponent } from './backdrop-demo/backdrop-demo.component';
     ContextualToolbarDemoComponent,
     HomeComponent,
     BannerDemoComponent,
-    BackdropDemoComponent
+    BackdropDemoComponent,
+    SpeedDialDemoComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +31,7 @@ import { BackdropDemoComponent } from './backdrop-demo/backdrop-demo.component';
     ContextualToolbarModule,
     BannerModule,
     BackdropModule,
+    FabSpeedDialModule,
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
@@ -50,6 +53,10 @@ import { BackdropDemoComponent } from './backdrop-demo/backdrop-demo.component';
       {
         path: 'banner',
         component: BannerDemoComponent
+      },
+      {
+        path: 'speed-dial',
+        component: SpeedDialDemoComponent
       },
       {
         path: '',

@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Speed Dial</h2>
+
+    <p>
+        When pressed, a FAB can display three to six related actions in the form of a <b>speed dial</b>. 
+        In this case, if you press the Add FAB on the right-bottom corner, you will get the options to add 
+        an image, a photo, a video or a document. You can check the console to see what the action selection event returns.
+    </p>
+    <p>
+        You can get more details on how this Material Design Component is expected to be used in the <a href="https://material.io/design/components/buttons-floating-action-button.html#types-of-transitions">official documentation</a>.
+    </p>
+</div>
+
+<nm-fab-speed-dial
+  [mainIcon]="'add'"
+  [actions]="fabSpeedDialActions"
+  (selectedAction)="onSelectedAction($event)">
+</nm-fab-speed-dial>

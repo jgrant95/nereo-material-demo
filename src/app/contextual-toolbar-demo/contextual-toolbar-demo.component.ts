@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { SelectionModel } from '@angular/cdk/collections';
 import { MatTableDataSource } from '@angular/material';
-import { ContextualToolbarComponent } from 'nereo-material';
+import { ContextualToolbarComponent, ActionElement } from 'nereo-material';
 import { Observable, interval, Subscription } from 'rxjs';
 
 @Component({
@@ -17,8 +17,8 @@ export class ContextualToolbarDemoComponent implements OnInit {
 
   selectedItems: number = 0;
   approvedElements: number = 0;
-  actions: any[] = ACTIONS;
-  moreActions: any[] = MORE_ACTIONS;
+  actions: ActionElement[] = ACTIONS;
+  moreActions: ActionElement[] = MORE_ACTIONS;
   progressSubscription: Subscription;
 
   displayedColumns = ['select', 'position', 'name', 'weight', 'symbol'];
