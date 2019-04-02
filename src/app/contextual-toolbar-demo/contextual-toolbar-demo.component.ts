@@ -43,9 +43,9 @@ export class ContextualToolbarDemoComponent implements OnInit {
         this.dataSource.data.forEach(row => this.selection.select(row));
   }
 
-  actionSelected(action: string): void{
+  actionSelected(action: ActionElement): void{
     console.log("App Component: ", action);
-    if (action == 'done') {
+    if (action.name == 'done') {
       this.showProgress();
     }
   }

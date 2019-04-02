@@ -8,10 +8,10 @@ import { ActionElement } from "nereo-material";
   })
   export class SpeedDialDemoComponent {
     fabSpeedDialActions : ActionElement[] = [
-      { icon: 'insert_photo', name: 'Image'},
-      { icon: 'photo_camera', name: 'Photo'},
-      { icon: 'videocam', name: 'Video'},
-      { icon: 'insert_drive_file', name: 'Document'}
+      { icon: 'insert_photo', name: 'Image', tooltip: ''},
+      { icon: 'photo_camera', name: 'Photo', tooltip: ''},
+      { icon: 'videocam', name: 'Video', tooltip: ''},
+      { icon: 'insert_drive_file', name: 'Document', tooltip: ''}
     ];
   
     constructor() {
